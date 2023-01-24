@@ -1,5 +1,4 @@
 import ballerina/constraint;
-import ballerina/time;
 
 // Defined records used to fetch data from database.
 
@@ -14,15 +13,15 @@ type User record {|
         minLength: 5
     }
     string name;
-    time:Date date_of_birth;
-    Categoty[] categories;
+    string date_of_birth;
+    Category[] categories?;
 |};
 
-type Categoty record {|
+type Category record {|
     int id;
     string title;
     string description;
-    Product[] products;
+    Product[] products?;
 |};
 
 type Product record {|
