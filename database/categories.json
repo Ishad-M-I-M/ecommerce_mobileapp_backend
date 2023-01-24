@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Category 1",
+        "description": "Duis amet cupidatat ipsum pariatur cupidatat cillum dolore id."
+    },
+    {
+        "id": 2,
+        "title": "Category 2",
+        "description": "Duis amet cupidatat ipsum pariatur cupidatat cillum dolore id."
+    },
+    {
+        "id": 3,
+        "title": "Category 3",
+        "description": "Duis amet cupidatat ipsum pariatur cupidatat cillum dolore id."
+    }
+]

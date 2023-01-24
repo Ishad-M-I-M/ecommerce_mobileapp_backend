@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "category_id": 2,
+        "title": "Product 1",
+        "short_description": "Consequat sit minim ullamco eu incididunt minim nisi ea aliqua velit do id.",
+        "description": "Non sint non aute occaecat exercitation irure non. Esse aliquip duis elit enim qui pariatur commodo sit officia. Ipsum non laboris officia nisi elit duis commodo occaecat deserunt aliquip dolore ipsum ullamco consectetur. Amet reprehenderit adipisicing adipisicing officia. In sit ipsum sunt Lorem eiusmod ea in laboris est mollit incididunt est.",
+        "price": 99.9
+    },
+    {
+        "id": 2,
+        "category_id": 3,
+        "title": "Product 2",
+        "short_description": "Consequat sit minim ullamco eu incididunt minim nisi ea aliqua velit do id.",
+        "description": "Non sint non aute occaecat exercitation irure non. Esse aliquip duis elit enim qui pariatur commodo sit officia. Ipsum non laboris officia nisi elit duis commodo occaecat deserunt aliquip dolore ipsum ullamco consectetur. Amet reprehenderit adipisicing adipisicing officia. In sit ipsum sunt Lorem eiusmod ea in laboris est mollit incididunt est.",
+        "price": 10.9
+    },
+    {
+        "id": 3,
+        "category_id": 1,
+        "title": "Product 3",
+        "short_description": "Consequat sit minim ullamco eu incididunt minim nisi ea aliqua velit do id.",
+        "description": "Non sint non aute occaecat exercitation irure non. Esse aliquip duis elit enim qui pariatur commodo sit officia. Ipsum non laboris officia nisi elit duis commodo occaecat deserunt aliquip dolore ipsum ullamco consectetur. Amet reprehenderit adipisicing adipisicing officia. In sit ipsum sunt Lorem eiusmod ea in laboris est mollit incididunt est.",
+        "price": 109.9
+    }
+]
