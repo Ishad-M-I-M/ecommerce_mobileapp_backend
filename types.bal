@@ -2,8 +2,8 @@ import ballerina/constraint;
 
 // Defined records used to fetch data from database.
 
-type User record {|
-    int id; // database id for the user
+public type User record {|
+    readonly int id; // database id for the user
     string username;
     @constraint:String {
         minLength: 5

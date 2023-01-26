@@ -29,6 +29,29 @@ public function getUsers() returns User[]|error {
     return users;
 }
 
+public function saveUser(User user) returns int|error {
+    json data = check io:fileReadJson(basePath + "users.json");
+    User[] users = check data.cloneWithType();
+
+    User validatedUser = check constraint:validate(user);
+
+    users.push(validatedUser);
+
+    _ = check io:fileWriteJson(basePath + "users.json", users);
+    return user.id;
+}
+
+function getUserById(int id) returns User|error {
+    User[] users = check getUsers();
+    table<User> key(id) userTable = table [];
+
+    foreach var user in users {
+        userTable.add(user);
+    }
+
+    return userTable.get(id);
+}
+
 public function getProducts() returns Product[]|error {
     json data = check io:fileReadJson(basePath + "products.json");
     Product[] products = check data.cloneWithType();

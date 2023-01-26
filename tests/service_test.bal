@@ -32,3 +32,46 @@ function getUsersTest() {
     }
 
 }
+
+@test:Config {}
+
+function saveUserTest() {
+    User[]|error users = getUsers();
+    if (users is error) {
+        test:assertFail("error in fetching users");
+    }
+
+    User user = {
+        id: 100,
+        name: "User 100",
+        password: "12345",
+        username: "user100",
+        date_of_birth: "1999-8-22T00:00:00.00Z",
+        categories: []
+    };
+
+    int|error e = saveUser(user);
+
+    if (e is error) {
+        test:assertFail("Insertion failed");
+    }
+    else {
+        User|error actual = getUserById(users.length());
+        User|error expected = user.cloneWithType();
+        if (actual is error || expected is error) {
+            test:assertFail("Error in conversion");
+        }
+        else {
+            expected.categories = [];
+
+            json|error newUser = expected.mergeJson({
+                "id": users.length()
+            });
+            if (newUser is error) {
+                test:assertFail();
+            }
+            test:assertEquals(actual, newUser);
+        }
+    }
+
+}
